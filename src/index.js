@@ -5,8 +5,8 @@
 // root.appendChild(h1);
 
 // using React & ReactDOM
-// import React from "react";
-// import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
 let h1 = React.createElement(
   "h1",
   { className: "text" },
@@ -18,8 +18,8 @@ let h2 = React.createElement(
   { className: "child" },
   "Hello this is child"
 );
-// let h3 = <h3 className="child">This is sub child</h3>; //need webpack configuration to support JSX
-let div = React.createElement("div", {}, [h1, h2]);
+let h3 = <h3 className="child">This is sub child</h3>; //need webpack configuration to support JSX
+let div = React.createElement("div", {}, [h1, h2,h3]);
 console.log(div);
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(div);
